@@ -1,6 +1,10 @@
 <h1>Categorie Pokémon</h1>
 <ul>
+  <!-- itero sulle categorie con @for (Angular 17+) -->
   @for (cat of categories; track cat.name) {
-    <li><a [routerLink]="['/type', cat.name]">{{ cat.name }}</a></li>
+    <li>
+      <!-- property binding: [routerLink] naviga a /type/fire ecc -->
+      <a [routerLink]="['/type', cat.name]">{{ cat.name }}</a>
+    </li>
   }
 </ul>

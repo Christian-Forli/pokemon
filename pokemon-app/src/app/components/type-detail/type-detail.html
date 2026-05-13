@@ -1,6 +1,8 @@
+<!-- mostro i dettagli solo se il pokemon è stato caricato (@if Angular 17+) -->
 @if (pokemon) {
   <h2>{{ pokemon.name }}</h2>
   <p>ID: {{ pokemon.id }}</p>
+  <!-- property binding su src e alt -->
   <img [src]="pokemon.sprites.front_default" [alt]="pokemon.name">
   <p>Altezza: {{ pokemon.height }}</p>
   <p>Peso: {{ pokemon.weight }}</p>

@@ -1,7 +1,9 @@
 <h2>Tipo: {{ typeName }}</h2>
 <ul>
+  <!-- itero sui pokemon con @for (Angular 17+) -->
   @for (p of pokemons; track p.name) {
     <li>
+      <!-- passo l'url del pokemon come query parameter per la pagina di dettaglio -->
       <a [routerLink]="['/type', typeName, 'detail']" [queryParams]="{ url: p.url }">{{ p.name }}</a>
     </li>
   }
